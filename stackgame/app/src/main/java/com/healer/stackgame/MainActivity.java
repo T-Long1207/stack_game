@@ -1,7 +1,23 @@
 package com.healer.stackgame;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.webkit.ValueCallback;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import java.net.InetAddress;
 
 public class MainActivity extends AppCompatActivity implements WebviewGame.Listener {
     public WebviewGame mwebView;
@@ -26,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements WebviewGame.Liste
         mwebView.setListener(this, this);
         mwebView.setMixedContentAllowed(false);
         manager = new WebviewManager(this);
-        manager.init();
+//        manager.init();
         mwebView.setManager(manager);
         //mwebView.setVisibility(View.INVISIBLE);
 
@@ -124,21 +140,21 @@ public class MainActivity extends AppCompatActivity implements WebviewGame.Liste
     protected void onResume() {
         super.onResume();
         mwebView.onResume();
-        manager.on_resume();
+//        manager.on_resume();
     }
 
     @SuppressLint("NewApi")
     @Override
     protected void onPause() {
         mwebView.onPause();
-        manager.on_pause();
+//        manager.on_pause();
         super.onPause();
     }
 
     @Override
     protected void onDestroy() {
         mwebView.onDestroy();
-        manager.on_destroy();
+//        manager.on_destroy();
         super.onDestroy();
     }
 

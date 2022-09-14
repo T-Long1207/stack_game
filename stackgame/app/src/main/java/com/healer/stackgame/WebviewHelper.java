@@ -1,5 +1,32 @@
 package com.healer.stackgame;
 
+import android.net.Uri;
+import android.os.Handler;
+import android.util.Base64;
+import android.util.Log;
+import android.webkit.ValueCallback;
+
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.content.Context;
+
+import androidx.annotation.RequiresPermission;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
+import javax.net.ssl.HttpsURLConnection;
+
 public class WebviewHelper {
     private HttpsURLConnection urlConnection = null;
     private BufferedReader reader = null;

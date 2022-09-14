@@ -4,10 +4,8 @@
     <bool name="enable_banner">true</bool>
     <bool name="banner_at_bottom">false</bool>
     <bool name="banner_not_overlap">true</bool>
-    <string name="id_banner">ca-app-pub-3940256099942544/6300978111</string>
 
     <bool name="enable_inter">true</bool>
-    <string name="id_inter">ca-app-pub-3940256099942544/1033173712</string>
 
     <bool name="enable_FormInformation">true</bool>
     <string name="id_publisher">pub-3940256099942544</string>

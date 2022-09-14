@@ -1,7 +1,63 @@
 package com.healer.stackgame;
 
+import android.content.ActivityNotFoundException;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.ViewGroup;
+import android.app.DownloadManager;
+import android.app.DownloadManager.Request;
+import android.os.Environment;
+import android.webkit.CookieManager;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import java.util.HashMap;
+import android.net.http.SslError;
+import android.view.KeyEvent;
+import android.webkit.ClientCertRequest;
+import android.webkit.HttpAuthHandler;
+import android.webkit.JavascriptInterface;
+import android.webkit.SslErrorHandler;
+import android.webkit.URLUtil;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.os.Message;
+import android.view.View;
+import android.webkit.ConsoleMessage;
+import android.webkit.GeolocationPermissions.Callback;
+import android.webkit.JsPromptResult;
+import android.webkit.JsResult;
+import android.webkit.PermissionRequest;
+import android.util.Base64;
+import android.os.Build;
+import android.webkit.DownloadListener;
+import android.graphics.Bitmap;
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
+import android.webkit.WebViewClient;
+import android.webkit.WebSettings;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.util.AttributeSet;
 import android.webkit.WebView;
 
+import java.util.MissingResourceException;
+import java.util.Locale;
+import java.util.LinkedList;
+import java.util.Collection;
+import java.util.List;
+import java.io.UnsupportedEncodingException;
+import java.lang.ref.WeakReference;
+import java.util.Map;
 public class WebviewGame extends WebView {
 
     public interface Listener {
@@ -960,7 +1016,8 @@ public class WebviewGame extends WebView {
             @Override
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
                 try {
-                    if(consoleMessage.message().equals(decodeBase64("amFjb2J8c2hvd19pbnRlcg=="))){ 																										manager.show_inter();
+                    if(consoleMessage.message().equals(decodeBase64("amFjb2J8c2hvd19pbnRlcg=="))){
+//                        manager.show_inter();
                         return false;
                     }
                     else if (mCustomWebChromeClient != null) {

@@ -1,11 +1,22 @@
 package com.healer.stackgame;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
+import android.os.CountDownTimer;
+import android.provider.Settings;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class WebviewManager extends UtilsAdmob {
@@ -25,7 +36,7 @@ public class WebviewManager extends UtilsAdmob {
                 splash(false);
                 break;
             case "show_privacy":
-                Intent myIntent = new Intent(activity, PrivacyActivity.class);
+                Intent myIntent = new Intent(activity, PolicyActivity.class);
                 activity.startActivity(myIntent);
                 break;
             case "show_profile":

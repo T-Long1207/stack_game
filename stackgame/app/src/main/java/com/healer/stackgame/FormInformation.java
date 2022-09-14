@@ -1,5 +1,11 @@
 package com.healer.stackgame;
 
+import android.app.Activity;
+import android.util.Log;
+import java.net.MalformedURLException;
+import java.net.URL;
+import com.google.ads.consent.*;
+
 public class FormInformation {
     private final String TAG = "Healer";
     private ConsentForm form;

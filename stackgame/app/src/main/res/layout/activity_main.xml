@@ -65,7 +65,6 @@
             android:layout_weight="1"
             android:visibility="visible"
             tools:ignore="MissingClass" />
-
     </LinearLayout>
 
 </RelativeLayout>

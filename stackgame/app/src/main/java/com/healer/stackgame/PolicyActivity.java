@@ -1,7 +1,12 @@
 package com.healer.stackgame;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class PolicyActivity extends AppCompatActivity {
     private TextView textview_privacy_policy;
@@ -10,7 +15,7 @@ public class PolicyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.privacy_policy);
+        setContentView(R.layout.activity_policy);
         textview_privacy_policy = findViewById(R.id.textview_privacy_policy);
 
         if (getSupportActionBar() != null)
