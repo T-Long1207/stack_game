@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no, minimal-ui" />
+    <link rel="stylesheet" type="text/css" href="./leaberboard_style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        function click_back_list() {
+            document.getElementById("page-edit").style.display = "none";
+            document.getElementById("page-list").style.display = "block";
+        }
+
+        function click_edit() {
+            document.getElementById("page-list").style.display = "none";
+            document.getElementById("page-edit").style.display = "block";
+        }
+
+
+        function hasClass(ele, cls) {
+            return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+        }
+
+        function removeClass(ele, cls) {
+            if (hasClass(ele, cls)) {
+                var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+                ele.className = ele.className.replace(reg, '');
+            }
+        }
+
+        function click_avatar(el) {
+            for (i = 0; i < 6; i++) removeClass(document.getElementById('avatar_' + i), 'selected');
+            el.className += ' selected';
+            document.getElementById('user_avatar').value = el.id.split('_')[1];
+        }
+    </script>
+</head>
+
+<body>
+    <div id="page-list">
+        <div class="btn_back" onclick=""></div>
+        <div class="lb_title"></div>
+        <div class="user"><img class="avatar" src="./leaderboard_avatar0.png" />
+            <div class="name">Marcus</div>
+            <div class="btn_edit" onclick="click_edit();"></div><br class="clear">
+            <div class="score">Score : 0</div><br class="clear"></div>
+        <div class="lb_list_container">
+            <table class="lb_list">
+                <tr>
+                    <th class="number">#</th>
+                    <th class="name">Player</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">1</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest ae697f809a636968</td>
+                    <td class="score">300</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">2</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">300</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">3</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">2300</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">4</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">600</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">5</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">500</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">6</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">400</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">7</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">300</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">8</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">100</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">9</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">100</td>
+                </tr>
+                <tr>
+                    <td class="number">
+                        <div class="rank">10</div><img src="./leaderboard_avatar0.png" /></td>
+                    <td class="name">Guest</td>
+                    <td class="score">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="page-edit" style="display:none;">
+        <div class="btn_back" onclick="click_back_list();"></div><br class="clear" />
+        <div class="user_label_change">Change user name : </div><input id="user_name" type="text" value="Marcus" /><br/><input id="user_avatar" type="hidden" value="0" /><br/>
+        <div class="user_label_change">Choose an avatar : </div>
+        <div class="user_avatar_container"><img id="avatar_0" onclick="click_avatar(this);" class="user_change_avatar selected" src="./leaderboard_avatar0.png" /><img id="avatar_1" onclick="click_avatar(this);" class="user_change_avatar"
+                src="./leaderboard_avatar1.png" /><img id="avatar_2" onclick="click_avatar(this);" class="user_change_avatar" src="./leaderboard_avatar2.png"
+            /><img id="avatar_3" onclick="click_avatar(this);" class="user_change_avatar" src="./leaderboard_avatar3.png" /><img id="avatar_4" onclick="click_avatar(this);" class="user_change_avatar"
+                src="./leaderboard_avatar4.png" /><img id="avatar_5" onclick="click_avatar(this);" class="user_change_avatar" src="./leaderboard_avatar5.png"
+            /><br class="clear" /><br></div>
+        <div class="btn_save" onclick=""></div>
+    </div>
+</body>
+
+</html>
