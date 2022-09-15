@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements WebviewGame.Liste
     public void checkConnection(Bundle savedInstanceState){
         boolean needConnection = getResources().getBoolean(R.bool.need_connection);
         boolean isConnected;
-        String url = "file:///android_asset/index.html";
+        String url = "file:///android_asset/stack/index.html";
         if (needConnection) {
             isConnected = isConnectionAvailable();
         }

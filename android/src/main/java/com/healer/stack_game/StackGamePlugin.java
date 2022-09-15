@@ -52,6 +52,9 @@ public class StackGamePlugin implements FlutterPlugin, ActivityAware, MethodCall
         this.result = result;
         play();
         break;
+      case "play2048":
+        this.result = result;
+        play2048();
       default:
         result.notImplemented();
         break;
@@ -60,6 +63,11 @@ public class StackGamePlugin implements FlutterPlugin, ActivityAware, MethodCall
 
   private void play() {
     Intent intent = new Intent(activity, MainActivity.class);
+    activity.startActivityForResult(intent, REQUEST_CODE);
+  }
+
+  private void play2048(){
+    Intent intent = new Intent(activity, GamePlayTwoActivity.class);
     activity.startActivityForResult(intent, REQUEST_CODE);
   }
 

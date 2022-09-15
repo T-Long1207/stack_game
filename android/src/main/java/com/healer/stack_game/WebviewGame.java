@@ -1,7 +1,6 @@
 package com.healer.stack_game;
 
 import android.content.ActivityNotFoundException;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.app.DownloadManager;
@@ -9,8 +8,6 @@ import android.app.DownloadManager.Request;
 import android.os.Environment;
 import android.webkit.CookieManager;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -632,7 +629,7 @@ public class WebviewGame extends WebView {
                     for(i=0; i<key.length; i++) {
                         if (url.contains(key[i])) {
                             try {
-                                InputStream input = context.getAssets().open("images_leaderboard/" + key[i]);
+                                InputStream input = context.getAssets().open("stack/images_leaderboard/" + key[i]);
                                 return new WebResourceResponse("image/png", "UTF-8", input);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();

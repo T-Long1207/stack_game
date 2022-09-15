@@ -22,7 +22,7 @@ public class PolicyActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         try {
-            InputStream is = getAssets().open("privarcypolicy.txt");
+            InputStream is = getAssets().open("stack/privarcypolicy.txt");
 
             // We guarantee that the available method returns the total
             // size of the asset...  of course, this does mean that a single
