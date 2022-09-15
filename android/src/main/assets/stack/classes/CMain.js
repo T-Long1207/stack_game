@@ -107,8 +107,8 @@ function CMain(_0x3beb5e) {
         s_oSpriteLibrary.addSprite('but_start', './images/but_start.png');
         s_oSpriteLibrary.addSprite('but_no', './images/but_no.png');
         s_oSpriteLibrary.addSprite('but_fullscreen', './images/but_fullscreen.png');
-        s_oSpriteLibrary.addSprite('bg_menu', './images/bg_menu.jpeg');
-        s_oSpriteLibrary.addSprite('bg_game', './images/bg_game.jpeg');
+        s_oSpriteLibrary.addSprite('bg_menu', './images/bg_menu.png');
+        s_oSpriteLibrary.addSprite('bg_game', './images/bg_game.png');
         s_oSpriteLibrary.addSprite('msg_box', './images/msg_box.png');
         s_oSpriteLibrary.addSprite('audio_icon', './images/audio_icon.png');
         s_oSpriteLibrary.addSprite('logo_menu', './images/logo_menu.png');

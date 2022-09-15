@@ -513,7 +513,6 @@ class _MyAppState extends State<_MyApp> {
 
   @override
   void initState() {
-    _play();
     super.initState();
   }
   @override
@@ -530,6 +529,15 @@ class _MyAppState extends State<_MyApp> {
                 child: Text("Test"),
                 onTap: (){
                   _play();
+                },
+              ),
+            ),
+            SizedBox(height: 50,),
+            Center(
+              child: InkWell(
+                child: Text("Test2"),
+                onTap: (){
+                  _play2();
                 },
               ),
             ),
@@ -564,6 +572,11 @@ class _MyAppState extends State<_MyApp> {
 
   Future _play() async {
     String? barcode = await stack_game.play();
+    Logger().d("Longkaka $barcode");
+  }
+
+  Future _play2() async {
+    String? barcode = await stack_game.play2048();
     Logger().d("Longkaka $barcode");
   }
 }
