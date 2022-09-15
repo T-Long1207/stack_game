@@ -1,0 +1,209 @@
+body {
+    background-color: black;
+    font-family: Arial;
+    font-size: 14px;
+    background-image: url('./leaderboard_bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	height:100vh;
+	overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+.lb_title{
+	float: right;
+    width: 75%;
+    height: 52px;
+    background-image: url(./leaderboard_title.png);
+    margin: 5px;
+    background-size: 100% 100%;
+}
+.btn_back {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url('./leaderboard_back.png');
+    cursor: pointer;
+}
+
+.btn_save {
+    margin: 0 auto;
+    width: 130px;
+    height: 34px;
+    background-image: url('./leaderboard_save.png');
+    cursor: pointer;
+}
+
+.user_label_change {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    font-size: 22px;
+	color: wheat;
+}
+
+.user_avatar_container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.user_change_avatar {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 10px;
+    border: solid 3px transparent;
+    cursor: pointer;
+}
+
+.user_change_avatar.selected {
+    border: 3px dashed #ececec;
+}
+
+#user_name {
+    font-size: 24px;
+	margin: 0 auto;
+	width: 90%;
+	display: block;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #9d9d9da3;
+	border: #55250d solid 3px;
+	margin-top: 5px;
+}
+
+.user {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.user .btn_edit {
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 69px;
+    height: 34px;
+    background-image: url('./leaderboard_edit.png');
+    cursor: pointer;
+}
+
+.user .avatar {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: solid 2px #c7ced4;
+    border-radius: 44px;
+    margin-left: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+.user .name {
+    float: left;
+    padding: 5px;
+    width: 110px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user .level {
+    padding: 5px;
+    border: solid 3px #d8d6d6;
+    margin: 0 auto;
+    width: 116px;
+    text-align: center;
+    font-weight: bold;
+    color: #47c14b;
+    font-size: 18px;
+}
+
+.user .score {
+    padding: 5px;
+    /*border: solid 3px #d8d6d6;*/
+    margin: 0 auto;
+    width: 116px;
+	background-image: url('./leaderboard_score.png');
+	background-size: 100% 100%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+.user .coins {
+    padding: 5px;
+    border: solid 3px #d8d6d6;
+    margin: 0 auto;
+    width: 116px;
+    text-align: center;
+    font-weight: bold;
+    color: #47c14b;
+    font-size: 18px;
+}
+
+.lb_list_container {
+    width: 100%;
+    max-height: calc(100vh - 250px);
+    overflow-y: scroll;
+}
+
+.lb_list {
+    /* border: solid black 1px; */
+    width: 100%;
+}
+
+.lb_list th{
+	color: #4a0f0f;
+}
+
+.lb_list tr:nth-child(even) {
+    background: #e1ff991f;
+	color: #fffefe;
+}
+
+.lb_list tr:nth-child(odd) {
+    background: #aeffbf33;
+	color: black;
+}
+
+.lb_list td {
+    border: solid #6a6a8e 1px;
+    /* height: 45px; */
+    padding: 6px;
+}
+
+.lb_list img {
+    width: 32px;
+}
+
+.lb_list .rank {
+    float: left;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.lb_list .score {
+    text-align: right;
+}
+
+.lb_list .level {
+    text-align: right;
+}
+
+img {  
+   user-drag: none;  
+   user-select: none;
+   -moz-user-select: none;
+   -webkit-user-drag: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+}

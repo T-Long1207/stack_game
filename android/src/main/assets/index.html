@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/orientation_utils.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,minimal-ui" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <script type="text/javascript" src="lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="lib/createjs.min.js"></script>
+    <script type="text/javascript" src="lib/screenfull.js"></script>
+    <script type="text/javascript" src="lib/howler.min.js"></script>
+    <script type="text/javascript" src="lib/ctl_utils.js"></script>
+    <script type="text/javascript" src="classes/sprite_lib.js"></script>
+    <script type="text/javascript" src="settings.js"></script>
+    <script type="text/javascript" src="classes/CLang.js"></script>
+    <script type="text/javascript" src="classes/CPreloader.js"></script>
+    <script type="text/javascript" src="classes/CMain.js"></script>
+    <script type="text/javascript" src="classes/CTextButton.js"></script>
+    <script type="text/javascript" src="classes/CToggle.js"></script>
+    <script type="text/javascript" src="classes/CGfxButton.js"></script>
+    <script type="text/javascript" src="classes/CMenu.js"></script>
+    <script type="text/javascript" src="classes/CGame.js"></script>
+    <script type="text/javascript" src="classes/CInterface.js"></script>
+    <script type="text/javascript" src="classes/CHelpPanel.js"></script>
+    <script type="text/javascript" src="classes/CWinPanel.js"></script>
+    <script type="text/javascript" src="classes/CCreditsPanel.js"></script>
+    <script type="text/javascript" src="classes/CPause.js"></script>
+    <script type="text/javascript" src="classes/CAreYouSurePanel.js"></script>
+    <script type="text/javascript" src="classes/CVector2.js"></script>
+    <script type="text/javascript" src="classes/CEdge.js"></script>
+    <script type="text/javascript" src="classes/CScoreBoard.js"></script>
+    <script type="text/javascript" src="classes/CStack.js"></script>
+    <script type="text/javascript" src="classes/CTextPerfect.js"></script>
+
+
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div>
+
+    <canvas id="canvas" class='ani_hack' width="840" height="1360"> </canvas>
+    <div data-orientation="portrait" class="orientation-msg-container">
+        <p class="orientation-msg-text">Please rotate your device</p>
+    </div>
+    <div id="block_game" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
+	<script src="hooks.js"></script>
+</body>
+
+</html>
